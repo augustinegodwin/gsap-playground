@@ -4,13 +4,19 @@ import { cards } from '@/app/constants'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 export default function TestimonialSection() {
     const vdRef = useRef<HTMLVideoElement[]>([]);
+     const isMobile = useMediaQuery({
+            query: "(max-width: 768px)",
+        });
     useGSAP(()=>{
-        gsap.set(".testimonials-section", {
+        if (!isMobile){
+          gsap.set(".testimonials-section", {
             marginTop: "-140vh",
         });
+        }
         const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonials-section",
@@ -65,15 +71,16 @@ export default function TestimonialSection() {
     video.pause();
   };
   return (
-    <section className="testimonials-section">
-        <div className="absolute size-full flex flex-col items-center pt-[5vw]">
+   <section className="testimonials-section">
+      <div className="absolute size-full flex flex-col items-center pt-[5vw]">
         <h1 className="text-black first-title">What's</h1>
         <h1 className="text-light-brown sec-title">Everyone</h1>
         <h1 className="text-black third-title">Talking</h1>
       </div>
+
       <div className="pin-box">
-        {cards.map((card,index)=>(
-            <div
+        {cards.map((card, index) => (
+          <div
             key={index}
             className={`vd-card ${card.translation} ${card.rotation}`}
             onMouseEnter={() => handlePlay(index)}

@@ -28,7 +28,7 @@ export default function VideoPinSection() {
         }
     },[])
   return (
-    <section className="vd-pin-section">
+   <section className="vd-pin-section">
       <div
         style={{
           clipPath: isMobile

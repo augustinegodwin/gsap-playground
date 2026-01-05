@@ -29,10 +29,13 @@ export default function page() {
           <MessageSection />
           <FlavourSection />
           <NutritionSection/>
+
           <div>
-          <BenefitSection/>
-          <TestimonialSection/>
+            <BenefitSection/>
+            <TestimonialSection/>
+            
           </div>
+          
         </div>
       </div>
     </main>
