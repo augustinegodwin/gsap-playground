@@ -8,10 +8,7 @@ import './awwards.css'
 import { Stack_Sans_Notch } from "next/font/google"
 import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/all';
-const Stack_Sans= Stack_Sans_Notch({
-  variable: "--font-stack-sans",
-  subsets: ["latin"],
-});
+import NutritionSection from '../components/awwards/sections/nutritionSection';
 gsap.registerPlugin(ScrollSmoother)
 export default function page() {
    useGSAP(() => {
@@ -28,7 +25,7 @@ export default function page() {
           <HeroSection />
           <MessageSection />
           <FlavourSection />
-        
+          <NutritionSection/>
         </div>
       </div>
     </main>
