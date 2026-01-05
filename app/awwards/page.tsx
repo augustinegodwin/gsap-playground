@@ -9,6 +9,8 @@ import { Stack_Sans_Notch } from "next/font/google"
 import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/all';
 import NutritionSection from '../components/awwards/sections/nutritionSection';
+import BenefitSection from '../components/awwards/sections/benefitSection';
+
 gsap.registerPlugin(ScrollSmoother)
 export default function page() {
    useGSAP(() => {
@@ -26,6 +28,7 @@ export default function page() {
           <MessageSection />
           <FlavourSection />
           <NutritionSection/>
+          <BenefitSection/>
         </div>
       </div>
     </main>
