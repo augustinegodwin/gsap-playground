@@ -10,6 +10,7 @@ import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/all';
 import NutritionSection from '../components/awwards/sections/nutritionSection';
 import BenefitSection from '../components/awwards/sections/benefitSection';
+import TestimonialSection from '../components/awwards/sections/testimonialSection';
 
 gsap.registerPlugin(ScrollSmoother)
 export default function page() {
@@ -28,7 +29,10 @@ export default function page() {
           <MessageSection />
           <FlavourSection />
           <NutritionSection/>
+          <div>
           <BenefitSection/>
+          <TestimonialSection/>
+          </div>
         </div>
       </div>
     </main>

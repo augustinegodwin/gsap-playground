@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import TitleClipPath from "../../titleClipPath";
+import VideoPinSection from "../../videoPinSection";
 gsap.registerPlugin(ScrollTrigger);
 export default function BenefitSection() {
   useGSAP(() => {
@@ -87,6 +88,9 @@ export default function BenefitSection() {
             <p>And much more ...</p>
           </div>
         </div>
+      </div>
+      <div className="relative overlay-box">
+        <VideoPinSection/>
       </div>
     </section>
   );
